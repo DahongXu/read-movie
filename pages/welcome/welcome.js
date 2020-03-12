@@ -1,15 +1,7 @@
 Page({
-  onTap: function (event) {
-    // wx.navigateTo({
-    //     url:"../posts/posts"
-    // });
-
+  toIndex: function(e) {
     wx.switchTab({
-      url: "../posts/posts"
-    });
-
-  },
-  onReachBottom: function (event) {
-    console.log('asfasdfa')
+      url: "../reads/reads"
+    })
   }
 })

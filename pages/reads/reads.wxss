@@ -1,0 +1,10 @@
+@import "reads-item/reads-item.wxss";
+.swiper-container {
+  width: 100%;
+  height: 600rpx;
+}
+
+.swiper-container image {
+  width: 100%;
+  height: 600rpx;
+}

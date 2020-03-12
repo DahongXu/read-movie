@@ -1,8 +1,7 @@
-<!--pages/welcome/welcome.wxml-->
-<view class="container">
-  <image class="avatar" src="/images/avatar/1.png"></image>
-  <text class="motto">Hello,七月</text>
-  <view class="journey-container" bind:tap="onTap">
-    <text class="journey">开启小程序之旅</text>
+<view class="container-box">
+  <image class="img-box" src="/images/avatar/3.png"></image>
+  <text class="text-box">Welcome to here</text>
+  <view class="btn-box" bindtap="toIndex">
+    <text class="btn">开启小程序之旅</text>
   </view>
 </view>

@@ -1,0 +1,15 @@
+<import src="reads-item/reads-item.wxml" />
+<view class="read-container">
+  <swiper class="swiper-container" autoplay="{{true}}" indicator-dots="{{true}}" interval="2000" indicator-active-color="red" catchtap="onSwiperTap">
+    <block wx:for="{{imageArray}}" wx:key="id" item="item">
+      <swiper-item>
+        <image src="{{item.src}}" data-postId="{{item.id}}" mode="aspectFit"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <block wx:for="{{readList}}" wx:key="postId" wx:for-item="item" wx:for-index="idx">
+    <view catchtap="toDetail" data-postId="{{item.postId}}">
+      <template is="readItem" data="{{...item}}" />
+    </view>
+  </block>
+</view>

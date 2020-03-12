@@ -1,37 +1,39 @@
 {
   "pages": [
     "pages/welcome/welcome",
-    "pages/posts/posts",
-    "pages/posts/post-detail/post-detail",
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/movies/movies",
-    "pages/movies/stars/stars-template",
-    "pages/movies/movie/movie-template",
-    "pages/movies/movie-list/movie-list-template"
+    "pages/reads/reads",
+    "pages/reads/reads-detail/reads-detail",
+    "custom-tab-bar/index",
+    "pages/movies/stars/stars",
+    "pages/movies/movie-list/movie-list",
+    "pages/movies/movie-template/movie-template",
+    "pages/movies/movie-grid/movie-grid",
+    "pages/movies/more-movie/more-movie",
+    "pages/movies/movie-detail/movie-detail"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#405f80",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#405f80"
   },
   "tabBar": {
     "borderStyle": "white",
+    "position": "bottom",
+    "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/posts/posts",
-        "text": "阅读",
-        "iconPath": "/images/tab/yuedu.png",
-        "selectedIconPath": "images/tab/yuedu_hl.png"
+        "pagePath": "pages/reads/reads",
+        "iconPath": "images/tab/yuedu.png",
+        "selectedIconPath": "images/tab/yuedu_hl.png",
+        "text": "阅读"
       },
       {
         "pagePath": "pages/movies/movies",
-        "text": "电影",
-        "iconPath": "/images/tab/dianying.png",
-        "selectedIconPath": "images/tab/dianying_hl.png"
+        "iconPath": "images/tab/dianying.png",
+        "selectedIconPath": "images/tab/dianying_hl.png",
+        "text": "电影"
       }
     ]
   },
+  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
