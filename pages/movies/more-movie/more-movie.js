@@ -33,13 +33,6 @@ Page({
     util.http(dataUrl, this.processDoubanData)
   },
 
-  // onScrollLower: function (event) {
-  //   var nextUrl = this.data.requestUrl +
-  //     "?start=" + this.data.totalCount + "&count=20";
-  //   util.http(nextUrl, this.processDoubanData)
-  //   wx.showNavigationBarLoading()
-  // },
-
   onReachBottom: function (event) {
     var nextUrl = this.data.requestUrl +
       "?start=" + this.data.totalCount + "&count=20";
@@ -65,7 +58,6 @@ Page({
       if (title.length >= 6) {
         title = title.substring(0, 6) + "...";
       }
-      // [1,1,1,1,1] [1,1,1,0,0]
       var temp = {
         stars: util.convertToStarsArray(subject.rating.stars),
         title: title,
@@ -100,10 +92,11 @@ Page({
     })
   },
 
-  onMovieTap: function (event) {
-    var movieId = event.currentTarget.dataset.movieid;
+  //跳转至电影详情页
+  toMovieDetail: function (e) {
+    var movieId = e.currentTarget.dataset.movieid;
     wx.navigateTo({
-      url: '../movie-detail/movie-detail?id=' + movieId
+      url: "../movie-detail/movie-detail?id=" + movieId
     })
-  },
+  }
 })

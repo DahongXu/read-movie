@@ -96,4 +96,11 @@ Page({
       url: "more-movie/more-movie?category=" + category
     })
   },
+  //跳转至电影详情页
+  toMovieDetail: function(e) {
+    var movieId = e.currentTarget.dataset.movieid;
+    wx.navigateTo({
+      url: "movie-detail/movie-detail?id=" + movieId
+    })
+  }
 })
